@@ -26,5 +26,5 @@ ssh root@$i chmod 777 /root/mck8s_lsv/results/02_cas.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/results/01_status.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/results/03_cptorennes.sh
 scp /home/chuang/.ssh/id_rsa root@$i:/root/.ssh
-ssh root@$i . /root/mck8s_lsv/precluster.sh $manage
+ssh root@$i . /root/mck8s_lsv/remote_script/precluster.sh $manage
 echo "----------------$i OK----------------"
