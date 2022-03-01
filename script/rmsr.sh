@@ -1,10 +1,7 @@
 i=$1
 manage=$2
-#echo "call $i"
-#echo "set registry-mirrors"
-#ssh root@$i sed -i '1a\ \"registry-mirrors\":[\"http://docker-cache.grid5000.fr\"],' /etc/docker/daemon.json
-#echo "restart docker"
-#ssh root@$i service docker restart
+
+
 
 echo "download new version of mck8s_lsv"
 ssh root@$i rm -rf /root/mck8s_lsv
