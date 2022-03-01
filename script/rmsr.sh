@@ -6,6 +6,7 @@ ssh root@$i rm -rf /root/mck8s_lsv
 scp -r /home/chuang/msdeploy/mck8s_lsv root@$i:/root/
 #ssh root@$i git clone -b experimemt01 https://github.com/CKHuangGH/mck8s_lsv.git
 echo "run precluster.sh (write ip address to config, and known host)"
+ssh root@$i pip3.10 install kubernetes
 ssh root@$i chmod 777 /root/mck8s_lsv/remote_script/precluster.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/01_combineAll.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/02_createvalue.sh
