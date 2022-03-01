@@ -1,8 +1,6 @@
 i=$1
 manage=$2
 
-
-
 echo "download new version of mck8s_lsv"
 ssh root@$i rm -rf /root/mck8s_lsv
 scp -r /home/chuang/msdeploy/mck8s_lsv root@$i:/root/
