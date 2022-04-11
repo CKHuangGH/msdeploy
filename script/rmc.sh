@@ -13,6 +13,7 @@ for j in `seq 1 $clustercount`
 			ssh root@$i helm install cilium cilium/cilium --version 1.11.2 --namespace kube-system --set cluster.name=cluster$clustername --set cluster.id=$clustername
 			ssh root@$i mv /root/.kube/config /root/.kube/cluster$clustername
 			ssh root@$i scp /root/.kube/cluster$clustername root@$managemodel:/root/.kube
+			ssh root@$i mv /root/.kube/cluster$clustername /root/.kube/config 
 			clustername=$(($clustername+1))	
 		done
 echo "----------------$i OK----------------"
