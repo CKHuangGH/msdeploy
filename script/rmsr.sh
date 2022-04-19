@@ -4,6 +4,7 @@ manage=$2
 echo "download new version of mck8s_lsv"
 ssh root@$i rm -rf /root/mck8s_lsv
 scp -r /home/chuang/msdeploy/mck8s_lsv root@$i:/root/
+scp -r /home/chuang/msdeploy/rntsm root@$i:/root/
 #ssh root@$i git clone -b experimemt01 https://github.com/CKHuangGH/mck8s_lsv.git
 echo "run precluster.sh (write ip address to config, and known host)"
 ssh root@$i pip3.10 install kubernetes

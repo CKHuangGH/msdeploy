@@ -2,6 +2,7 @@
 uniq $OAR_NODEFILE > node_list
 manage=$(awk NR==1 node_list)
 git clone https://github.com/CKHuangGH/mck8s_lsv.git
+git clone https://github.com/CKHuangGH/rntsm.git
 chmod 777 /home/chuang/msdeploy/script/rmsr.sh
 
 for i in $(cat node_list)
