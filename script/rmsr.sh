@@ -5,10 +5,8 @@ echo "download new version of mck8s_lsv"
 ssh root@$i rm -rf /root/mck8s_lsv
 scp -r /home/chuang/msdeploy/mck8s_lsv root@$i:/root/
 scp -r /home/chuang/msdeploy/rntsm root@$i:/root/
-#ssh root@$i git clone -b experimemt01 https://github.com/CKHuangGH/mck8s_lsv.git
 echo "run precluster.sh (write ip address to config, and known host)"
 ssh root@$i pip3.10 install kubernetes
-ssh root@$i pip3.10 install prometheus_client
 ssh root@$i pip3.10 install prometheus_api_client
 ssh root@$i chmod 777 /root/mck8s_lsv/remote_script/precluster.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/01_combineAll.sh
@@ -20,6 +18,8 @@ ssh root@$i chmod 777 /root/mck8s_lsv/06_deployment.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/patch/patch.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/patch/worker_node_patch.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/checking.sh
+ssh root@$i chmod 777 /root/mck8s_lsv/createvalue_rntsm.sh
+ssh root@$i chmod 777 /root/mck8s_lsv/createvalue.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/worker_node.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/results/02_cas.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/results/01_status.sh
