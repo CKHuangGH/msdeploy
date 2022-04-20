@@ -12,7 +12,7 @@ ssh root@$i pip3.10 install prometheus_client
 ssh root@$i pip3.10 install prometheus_api_client
 ssh root@$i chmod 777 /root/mck8s_lsv/remote_script/precluster.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/01_combineAll.sh
-ssh root@$i chmod 777 /root/mck8s_lsv/02_createvalue.sh
+ssh root@$i chmod 777 /root/mck8s_lsv/02_createmember.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/03_mck8s.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/04_mck8s-2.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/05_joining_test.sh
