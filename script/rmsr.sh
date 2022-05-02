@@ -6,6 +6,10 @@ echo "download new version of mck8s_lsv"
 scp -r /home/chuang/msdeploy/mck8s_lsv root@$i:/root/
 scp -r /home/chuang/msdeploy/rntsm root@$i:/root/
 echo "run precluster.sh (write ip address to config, and known host)"
+ssh root@$i wget -c https://github.com/scottchiefbaker/dool/archive/refs/tags/v1.0.0.tar.gz
+ssh root@$i tar xzvf v1.0.0.tar.gz
+ssh root@$i mv dool-1.0.0/dool /usr/local/bin/
+ssh root@$i mv dool-1.0.0/plugins/ /usr/local/bin/
 ssh root@$i chmod 777 /root/mck8s_lsv/remote_script/precluster.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/01_combineAll.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/02_createmember.sh
