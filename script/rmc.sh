@@ -5,7 +5,7 @@ managemodel=$4
 yaml=$5
 for j in `seq 1 $clustercount`
 		do
-			ssh root@$i kind create cluster --image kindest/node:v1.23.6 --config /root/mck8s_lsv/remote_script/config_03/kind-example-config-$j.yaml --name cluster$clustername
+			ssh root@$i kind create cluster --image kindest/node:v1.23.5 --config /root/mck8s_lsv/remote_script/config_03/kind-example-config-$j.yaml --name cluster$clustername
 			echo "waiting cluster........"
 			sleep 15
 			ssh root@$i kubectl config use-context kind-cluster$clustername
