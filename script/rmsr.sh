@@ -2,12 +2,10 @@ i=$1
 manage=$2
 
 echo "download new version of mck8s_lsv"
-ssh root@$i rm -rf /root/mck8s_lsv
+#ssh root@$i rm -rf /root/mck8s_lsv
 scp -r /home/chuang/msdeploy/mck8s_lsv root@$i:/root/
 scp -r /home/chuang/msdeploy/rntsm root@$i:/root/
 echo "run precluster.sh (write ip address to config, and known host)"
-ssh root@$i pip3.10 install kubernetes
-ssh root@$i pip3.10 install prometheus_api_client
 ssh root@$i chmod 777 /root/mck8s_lsv/remote_script/precluster.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/01_combineAll.sh
 ssh root@$i chmod 777 /root/mck8s_lsv/02_createmember.sh
