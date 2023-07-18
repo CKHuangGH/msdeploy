@@ -1,1 +1,1 @@
-kubectl config use-context kind-mamagement0
+kubectl config use-context kind-management0
