@@ -1,6 +1,7 @@
-uniq $OAR_NODEFILE > node_list
+clusterstart=0
+numberofcluster=1
 manage=$(awk NR==1 node_list)
-scp reset.sh root@$manage:/root/mck8s_lsv
+scp node_list root@$manage:/root/mck8s_lsv
 chmod 777 /home/chuang/msdeploy/script/rmc.sh
 
 	for i in $(cat node_list)
