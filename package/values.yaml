@@ -1,2 +1,7 @@
 storage:
   persistence: false
+sync:
+  persistentvolumes:
+    enabled: true
+  ingresses:
+    enabled: true
