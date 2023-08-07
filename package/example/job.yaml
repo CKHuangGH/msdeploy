@@ -4,7 +4,14 @@ metadata:
   name: job-test
   namespace: default
 spec:
+  manualSelector: true
+  selector:
+    matchLabels:
+      job: pi
   template:
+    metadata:
+      labels:
+        job: pi
     spec:
       containers:
       - name: pi
