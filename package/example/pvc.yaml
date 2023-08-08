@@ -4,7 +4,7 @@ metadata:
   name: my-pvc
   namespace: default
 spec:
-  storageClassName: local-storage
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
