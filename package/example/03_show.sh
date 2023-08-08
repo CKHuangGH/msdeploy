@@ -1,0 +1,13 @@
+kubectl get namespace --context kind-member0
+kubectl get job --context kind-member0
+kubectl get pod --context kind-member0
+kubectl get deployment --context kind-member0
+kubectl get service --context kind-member0
+kubectl get endpointslices --context kind-member0
+kubectl get endpoint --context kind-member0
+kubectl get ingresses --context kind-member0
+kubectl get pv --context kind-member0
+kubectl get pvc --context kind-member0
+kubectl get configmap --context kind-member0
+kubectl get secret --context kind-member0
+kubectl get storageclass --context kind-member0
