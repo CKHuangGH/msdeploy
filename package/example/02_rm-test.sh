@@ -21,3 +21,5 @@ clusteradm delete work cfmap-run-test --clusters cluster1
 clusteradm delete work secret-test --clusters cluster1
 
 clusteradm delete work namespace-test --clusters cluster1
+
+clusteradm delete work statefulset-test --clusters cluster1
