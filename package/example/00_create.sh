@@ -11,6 +11,8 @@ clusteradm create work service-nodeport-test -f service-nodeport.yaml --clusters
 clusteradm create work ingress-test -f ingress.yaml --clusters cluster1
 
 clusteradm create work pv-test -f pv.yaml --clusters cluster1
+
+clusteradm create work pv2-test -f pv2.yaml --clusters cluster1
 clusteradm create work pvc-test -f pvc.yaml --clusters cluster1
 
 clusteradm create work cfmap-test -f cfmap.yaml --clusters cluster1
