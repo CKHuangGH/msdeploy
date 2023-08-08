@@ -6,6 +6,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-INDEX
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -22,15 +23,15 @@ spec:
 EOF
 )
 
-# 迴圈 5000 次
-for ((i=1; i<=200; i++)); do
+# 迴圈 1000 次
+for ((i=1; i<=100; i++)); do
     deployment_yaml="${deployment_template//INDEX/$i}"
     echo "$deployment_yaml" > nginx-deployment-$i.yaml
     
     # 使用 kubectl 創建 Deployment
     #kubectl apply -f nginx-deployment-$i.yaml
-    clusteradm create work -f nginx-deployment-$i.yaml
-    echo "Created deployment: nginx-$i"
+    clusteradm create work test$i -f nginx-deployment-$i.yaml --cluster cluster1
+    rm -rf nginx-deployment-$i.yaml
 done
 
 echo "All deployments created."
