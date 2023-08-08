@@ -1,4 +1,4 @@
-clusteradm delete work namespace-test --clusters cluster1
+
 
 clusteradm delete work job-test --clusters cluster1
 clusteradm delete work pod-test --clusters cluster1
@@ -19,3 +19,5 @@ clusteradm delete work cfmap-test --clusters cluster1
 clusteradm delete work cfmap-run-test --clusters cluster1
 
 clusteradm delete work secret-test --clusters cluster1
+
+clusteradm delete work namespace-test --clusters cluster1
