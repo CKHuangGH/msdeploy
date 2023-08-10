@@ -14,3 +14,7 @@ for i in {1..3}
 do
 echo "  apiServerAddress: \"$(ifconfig eno1 |grep "inet " | cut -f 10 -d " ")"\" >> config/kind-example-config-$i.yaml
 done
+
+kind create cluster --config config/kind-example-config-1.yaml --name management0 &
+kind create cluster --config config/kind-example-config-2.yaml --name management1 &
+kind create cluster --config config/kind-example-config-3.yaml --name member0 &
