@@ -29,10 +29,3 @@ cd clusteradm_mmc/
 make build
 
 cp /root/go/bin/clusteradm /usr/local/bin/clusteradm
-
-clusteradm init --wait --context kind-management0 &
-clusteradm init --wait --context kind-management1 &
-
-kubectl --context=kind-management0 create -f metrics_server.yaml
-kubectl --context=kind-management1 create -f metrics_server.yaml
-kubectl --context=kind-member0 create -f metrics_server.yaml
