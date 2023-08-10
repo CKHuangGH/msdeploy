@@ -18,3 +18,21 @@ done
 kind create cluster --config config/kind-example-config-1.yaml --name management0 &
 kind create cluster --config config/kind-example-config-2.yaml --name management1 &
 kind create cluster --config config/kind-example-config-3.yaml --name member0 &
+
+rm -rf /usr/local/bin/clusteradm
+
+rm -rf clusteradm_mmc/
+
+git clone https://github.com/CKHuangGH/clusteradm_mmc.git
+chmod 777 clusteradm_mmc/
+cd clusteradm_mmc/
+make build
+
+cp /root/go/bin/clusteradm /usr/local/bin/clusteradm
+
+clusteradm init --wait --context kind-management0 &
+clusteradm init --wait --context kind-management1 &
+
+kubectl --context=kind-management0 create -f metrics_server.yaml
+kubectl --context=kind-management1 create -f metrics_server.yaml
+kubectl --context=kind-member0 create -f metrics_server.yaml
