@@ -1,3 +1,4 @@
+clusteradm get works --cluster cluster1
 echo "-----------------------namespace-----------------------"
 kubectl get namespace --context kind-member0
 echo "-----------------------pod-----------------------"
