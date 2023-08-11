@@ -20,5 +20,4 @@ clusteradm create work cfmap-run-test -f cfmap-test.yaml --clusters cluster1
 
 clusteradm create work secret-test -f secret.yaml --clusters cluster1
 
-
 clusteradm create work statefulset-test -f statefulset.yaml --clusters cluster1

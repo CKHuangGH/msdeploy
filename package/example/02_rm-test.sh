@@ -19,7 +19,7 @@ clusteradm delete work cfmap-run-test --clusters cluster1
 clusteradm delete work secret-test --clusters cluster1
 
 clusteradm delete work pv-test --clusters cluster1
-sleep 10
+
 clusteradm delete work pv2-test --clusters cluster1
-sleep 10
+
 clusteradm delete work storageclass-test --clusters cluster1
